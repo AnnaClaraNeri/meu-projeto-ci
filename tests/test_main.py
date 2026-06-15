@@ -7,3 +7,4 @@ def test_somar_correto():
 
 def test_conectar_api_com_sucesso():
     assert conectar_api() == "Conexão Estabelecida com Sucesso!"
+    
