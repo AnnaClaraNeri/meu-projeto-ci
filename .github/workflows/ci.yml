@@ -33,8 +33,8 @@ jobs:
         run: flake8 .
 
       # Meta 4: Injetando Segredos com segurança na execução dos testes
-      - name: Executar Testes Automatizados (PyTest)
+            - name: Executar Testes Automatizados (PyTest)
         env:
-          # Capturando os valores mapeados no repositório de forma invisível via memória
           MINHA_API_SECRET: ${{ secrets.MINHA_API_SECRET }}
+          PYTHONPATH: ${{ github.workspace }}
         run: pytest
